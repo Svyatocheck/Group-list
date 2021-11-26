@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../../../layout/custom_preview.xml" value="0.5361111111111111" />
+        <entry key="../../../../../layout/custom_preview.xml" value="0.46776232616940583" />
+        <entry key="..\:/Users/svyat/AppData/Local/Android/Sdk/platforms/android-31/data/res/layout/simple_spinner_item.xml" value="0.2916666666666667" />
+        <entry key="..\:/Users/svyat/Desktop/Unversity staff/groupList/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.3828125" />
+        <entry key="..\:/Users/svyat/Desktop/Unversity staff/groupList/app/src/main/res/drawable/shape.xml" value="0.3828125" />
+        <entry key="..\:/Users/svyat/Desktop/Unversity staff/groupList/app/src/main/res/drawable/shape_second.xml" value="0.3828125" />
+        <entry key="..\:/Users/svyat/Desktop/Unversity staff/groupList/app/src/main/res/layout/activity_edit_page.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/svyat/Desktop/Unversity staff/groupList/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/svyat/Desktop/Unversity staff/groupList/app/src/main/res/layout/content_edit_page.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/svyat/Desktop/Unversity staff/groupList/app/src/main/res/layout/fragment_first.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/svyat/Desktop/Unversity staff/groupList/app/src/main/res/layout/fragment_second.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/svyat/Desktop/Unversity staff/groupList/app/src/main/res/layout/item_list.xml" value="0.5" />
+        <entry key="app/src/main/res/layout-land/activity_edit_page.xml" value="0.31145833333333334" />
+        <entry key="app/src/main/res/layout-land/activity_main.xml" value="0.31145833333333334" />
+        <entry key="app/src/main/res/layout-land/item_list.xml" value="0.31145833333333334" />
+        <entry key="app/src/main/res/layout/activity_edit_page.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/item_list.xml" value="0.67" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

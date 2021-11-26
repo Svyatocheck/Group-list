@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:gravity="center"
+    android:onClick="hideKeyboard"
+    android:orientation="vertical"
+    tools:context=".EditPage">
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="325dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="48dp"
+        android:background="@drawable/shape"
+        android:editable="true"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="ФИО" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="45dp"
+        android:background="@drawable/shape">
+
+        <CheckBox
+            android:id="@+id/maleCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checker"
+            android:text="Male" />
+
+        <CheckBox
+            android:id="@+id/femaleCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checker"
+            android:text="Female" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <Spinner
+        android:id="@+id/ideList"
+        android:layout_width="325dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="48dp"
+        android:background="@drawable/shape" />
+
+    <Spinner
+        android:id="@+id/langList"
+        android:layout_width="325dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="48dp"
+        android:background="@drawable/shape" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="167dp"
+        android:gravity="center|top">
+
+        <Button
+            android:id="@+id/btnOk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="44dp"
+            android:text="Ok" />
+
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="48dp"
+            android:onClick="onBackClick"
+            android:text="Back" />
+    </LinearLayout>
+
+</LinearLayout>
