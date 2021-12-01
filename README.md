@@ -1,2 +1,1 @@
-# Group-list
-![Screenshot from 2021-11-26 08-19-56](https://user-images.githubusercontent.com/63301430/143531348-057d22f7-80e1-4b4e-8bcc-f37d5e7d5183.png)
+![Screenshot from 2021-12-01 12-41-41](https://user-images.githubusercontent.com/63301430/144210475-0a1208e9-6edf-4335-87d0-c8bdb84e58dc.png)
