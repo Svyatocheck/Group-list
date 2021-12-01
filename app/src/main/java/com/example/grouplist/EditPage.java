@@ -48,6 +48,7 @@ public class EditPage extends AppCompatActivity implements View.OnClickListener 
 
         btnOk.setOnClickListener(this);
         backBtn.setOnClickListener(this);
+        backBtn.setOnClickListener(v -> finish());
 
         etName.setOnClickListener(v -> etName.getText().clear());
 
@@ -55,8 +56,8 @@ public class EditPage extends AppCompatActivity implements View.OnClickListener 
                 "Click to select IDE", "Android Studio", "IntelliJ IDEA", "VS Code", "Visual Studio 2019", "Eclipse", "SublimeText",
         };
         Spinner ideList = (Spinner) findViewById(R.id.ideList);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                                android.R.layout.simple_spinner_item, arraySpinner);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
+                android.R.layout.simple_spinner_item, arraySpinner);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         ideList.setAdapter(adapter);
 
@@ -64,7 +65,7 @@ public class EditPage extends AppCompatActivity implements View.OnClickListener 
                 "Click to select Language", "Python", "C++", "Java", "Basic", "Kotlin", "C#",
         };
         Spinner langList = (Spinner) findViewById(R.id.langList);
-        ArrayAdapter<String> secAdapter = new ArrayAdapter<String>(this,
+        ArrayAdapter<String> secAdapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_spinner_item, arraySecondSpinner);
         secAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         langList.setAdapter(secAdapter);
@@ -166,8 +167,6 @@ public class EditPage extends AppCompatActivity implements View.OnClickListener 
             intent.putExtra("language", lang);
 
             setResult(RESULT_OK, intent);
-
-            Toast.makeText(this, "A new item was created!", Toast.LENGTH_SHORT).show();
 
         } else {
             Toast.makeText(this, "The fields were not filled in...", Toast.LENGTH_SHORT).show();
