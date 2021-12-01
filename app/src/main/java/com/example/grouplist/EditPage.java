@@ -10,22 +10,10 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
-
-import com.example.grouplist.toStore.Person;
-import com.example.grouplist.toStore.csvWorker;
-import com.example.grouplist.toStore.jsonWorker;
-import com.example.grouplist.toStore.txtWorker;
-import com.example.grouplist.toStore.xmlWorker;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
 
 
 public class EditPage extends AppCompatActivity implements View.OnClickListener {
@@ -40,11 +28,6 @@ public class EditPage extends AppCompatActivity implements View.OnClickListener 
     CheckBox femaleCheck;
     String position = "";
 
-    CheckBox csvCheck;
-    CheckBox txtCheck;
-    CheckBox jsonCheck;
-    CheckBox xmlCheck;
-    TextView outputTxt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,10 +45,6 @@ public class EditPage extends AppCompatActivity implements View.OnClickListener 
         ideList = (Spinner) findViewById(R.id.ideList);
         langList = (Spinner) findViewById(R.id.langList);
 
-        txtCheck = (CheckBox)findViewById(R.id.txtBox);
-        csvCheck = (CheckBox) findViewById(R.id.csvCheck);
-        jsonCheck = (CheckBox) findViewById(R.id.jsonCheck);
-        xmlCheck = (CheckBox)findViewById(R.id.xmlCheck);
 
         btnOk.setOnClickListener(this);
         backBtn.setOnClickListener(this);
@@ -150,60 +129,6 @@ public class EditPage extends AppCompatActivity implements View.OnClickListener 
 
     }
 
-    public String Boxes(String name, String sex, String ide, String lang)
-    {
-        String data = "";
-        String check = "";
-
-        if (txtCheck.isChecked())
-        {
-            data = name + ";" + sex + ";" + ide + ";" + lang + ";\n";
-            txtWorker.txtWrite(data, this);
-            check += "txt ";
-        }
-
-        if (csvCheck.isChecked())
-        {
-            data = name + ";" + sex + ";" + ide + ";" + lang + ";\n";
-            csvWorker.WriteToCsv(data, this);
-            check += "csv ";
-        }
-
-        if (jsonCheck.isChecked())
-        {
-            //json save
-            JSONObject jsonObject = new JSONObject();
-            try {
-                jsonObject.put("Name", name);
-                jsonObject.put("Sex", sex);
-                jsonObject.put("IDE", ide);
-                jsonObject.put("Lang", lang);
-                jsonWorker.writeJson(jsonObject, this);
-
-                check += "json ";
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-
-        if (xmlCheck.isChecked())
-        {
-            // xml write
-            Person person = new Person(name, sex, ide, lang);
-            try {
-                xmlWorker.CreateXMLString(person, this);
-
-                check += "xml ";
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-        }
-
-        return check;
-
-    }
-
     @Override
     public void onClick(View v) {
         Intent intent = new Intent();
@@ -229,8 +154,6 @@ public class EditPage extends AppCompatActivity implements View.OnClickListener 
                 !(ide.equals("Click to select IDE")) &&
                 !(lang.equals("Click to select Language"))) {
 
-            check = Boxes(name, sex, ide, lang);
-
             if (!position.isEmpty()) {
                 // Значит элемент в режиме редактирования
                 intent.putExtra("position", position);
@@ -241,7 +164,6 @@ public class EditPage extends AppCompatActivity implements View.OnClickListener 
             intent.putExtra("sex", sex);
             intent.putExtra("ide", ide);
             intent.putExtra("language", lang);
-            intent.putExtra("file", check);
 
             setResult(RESULT_OK, intent);
 
