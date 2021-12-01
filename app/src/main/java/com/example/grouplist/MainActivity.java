@@ -6,12 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.example.grouplist.toStore.Person;
 
 import java.util.ArrayList;
 
@@ -50,17 +49,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         recycler.setAdapter(listAdapter);
 
         try {
-            int finder = findUsingIterator(name, position, personList);
-            if (finder > -1)
+           // int finder = findUsingIterator(name, position, personList);
+            if (position > -1)
             {
-                personList.get(finder).setName(name);
-                personList.get(finder).setSex(sex);
-                personList.get(finder).setIde(ide);
-                personList.get(finder).setLang(lang);
+                personList.get(position).setName(name);
+                personList.get(position).setSex(sex);
+                personList.get(position).setIde(ide);
+                personList.get(position).setLang(lang);
 
             } else {
                 Person person = new Person(name, sex, ide, lang);
-                personList.add(position, person);
+                personList.add(0, person);
             }
 
         } catch (Exception ignore)
@@ -94,8 +93,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             try {
                 position = Integer.parseInt(data.getStringExtra("position"));
+                Toast.makeText(this, "Item updated!!", Toast.LENGTH_SHORT).show();
             } catch (Exception ex) {
-                position = 0;
+                Toast.makeText(this, "A new item was created!", Toast.LENGTH_SHORT).show();
+                position = -1;
             }
 
             addUser(name, sex, ide, lang, position);

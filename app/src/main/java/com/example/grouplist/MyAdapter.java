@@ -6,12 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.example.grouplist.toStore.Person;
 
 import java.util.ArrayList;
 
@@ -88,7 +85,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.PersonHolder> {
 
             deleteItem.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    Toast.makeText(itemView.getContext(), "Delete button pressed", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(itemView.getContext(), "Delete button pressed", Toast.LENGTH_SHORT).show();
 
                     int position = getAdapterPosition();
                     people.remove(position);
@@ -101,7 +98,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.PersonHolder> {
             editItem.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(itemView.getContext(), "Edit button pressed", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(itemView.getContext(), "Edit button pressed", Toast.LENGTH_SHORT).show();
                     onNoteListener.onNoteClick(getAdapterPosition());
                 }});
         }
@@ -139,7 +136,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.PersonHolder> {
         public void onClick(View view) {
             Log.e("Note", "Note clicked!");
         }
-
 
     }
 }

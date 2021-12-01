@@ -8,50 +8,6 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/typeChip"
-        android:layout_width="match_parent"
-        android:layout_height="59dp"
-        android:layout_marginStart="53dp"
-        android:layout_marginEnd="53dp"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnLoad"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Saved in:" />
-
-        <CheckBox
-            android:id="@+id/txtBox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="txt" />
-
-        <CheckBox
-            android:id="@+id/csvCheck"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="csv" />
-
-        <CheckBox
-            android:id="@+id/jsonCheck"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="json" />
-
-        <CheckBox
-            android:id="@+id/xmlCheck"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="xml" />
-
-    </com.google.android.material.chip.ChipGroup>
-
     <Button
         android:id="@+id/addUser"
         android:layout_width="wrap_content"

@@ -1,4 +1,4 @@
-package com.example.grouplist.toStore;
+package com.example.grouplist;
 import java.io.Serializable;
 
 public class Person implements Serializable {
